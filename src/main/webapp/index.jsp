@@ -17,10 +17,9 @@
 <link rel="stylesheet" href="${PATH }/layui/css/all.css">
 </head>
 <body>
-
+<form id="loginForm" action="${PATH}/doLogin" method="post">
 	<div class="layadmin-user-login layadmin-user-display-show"
 		id="LAY-user-login" style="display: none;">
-
 		<div class="layadmin-user-login-main">
 			<div class="layadmin-user-login-box layadmin-user-login-header">
 				<h2>layuiAdmin</h2>
@@ -32,14 +31,14 @@
 					<label
 						class="layadmin-user-login-icon layui-icon layui-icon-username"
 						for="LAY-user-login-username"></label> <input type="text"
-						name="username" id="LAY-user-login-username" lay-verify="required"
+						name="loginacct" id="LAY-user-login-username" lay-verify="required"
 						placeholder="用户名" class="layui-input">
 				</div>
 				<div class="layui-form-item">
 					<label
 						class="layadmin-user-login-icon layui-icon layui-icon-password"
 						for="LAY-user-login-password"></label> <input type="password"
-						name="password" id="LAY-user-login-password" lay-verify="required"
+						name="userpswd" id="LAY-user-login-password" lay-verify="required"
 						placeholder="密码" class="layui-input">
 				</div>
 				<div class="layui-form-item">
@@ -85,25 +84,24 @@
 				© 2018 <a href="http://www.layui.com/" target="_blank">layui.com</a>
 			</p>
 		</div>
-
 	</div>
-
+</form>
 	<script src="${PATH }/layui/layui.js"></script>
+	<script src="${PATH }/layui/jquery.min.js"></script>
 	<script>
 		layui.use([ 'element', 'form' ], function() {
 			var element = layui.element, form = layui.form, layer = layui.layer ;
 			form.render();
-			
 			//提交
 			form.on('submit(LAY-user-login-submit)', function(obj) {
 				obj.elem.classList.add("layui-btn-disabled");//样式上的禁用效果
 				obj.elem.disabled = true;//真正的禁用效果
 				layer.msg("登陆成功，即将跳转");
+				$("#loginForm").submit();
 				setTimeout(function(){
 					location.href="main.html";
 				}, 2000);
 			});
-
 		});
 	</script>
 </body>
