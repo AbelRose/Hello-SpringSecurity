@@ -17,13 +17,18 @@
 <link rel="stylesheet" href="${PATH }/layui/css/all.css">
 </head>
 <body>
-<form id="loginForm" action="${PATH}/doLogin" method="post">
+<form id="loginForm" action="${PATH}/index.jsp" method="post">
 	<div class="layadmin-user-login layadmin-user-display-show"
 		id="LAY-user-login" style="display: none;">
+
 		<div class="layadmin-user-login-main">
 			<div class="layadmin-user-login-box layadmin-user-login-header">
 				<h2>layuiAdmin</h2>
 				<p>layui 官方出品的单页面后台管理模板系统</p>
+				<p>${SPRING_SECURITY_LAST_EXCEPTION.message}</p>
+				
+				<!-- org.springframework.security.web.csrf.DefaultCsrfToken -->
+				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
 			</div>
 			<div
 				class="layadmin-user-login-box layadmin-user-login-body layui-form">
@@ -59,7 +64,7 @@
 					</div>
 				</div>
 				<div class="layui-form-item" style="margin-bottom: 20px;">
-					<input type="checkbox" name="remember" lay-skin="primary"
+					<input type="checkbox" name="remember-me" lay-skin="primary"
 						title="记住密码"> <a href="forget.html"
 						class="layadmin-user-jump-change layadmin-link"
 						style="margin-top: 7px;">忘记密码？</a>
@@ -84,24 +89,24 @@
 				© 2018 <a href="http://www.layui.com/" target="_blank">layui.com</a>
 			</p>
 		</div>
+
 	</div>
 </form>
 	<script src="${PATH }/layui/layui.js"></script>
-	<script src="${PATH }/layui/jquery.min.js"></script>
+	<script src="${PATH }/layui/jquery-2.1.1.min.js"></script>
 	<script>
 		layui.use([ 'element', 'form' ], function() {
 			var element = layui.element, form = layui.form, layer = layui.layer ;
 			form.render();
+			
 			//提交
 			form.on('submit(LAY-user-login-submit)', function(obj) {
 				obj.elem.classList.add("layui-btn-disabled");//样式上的禁用效果
 				obj.elem.disabled = true;//真正的禁用效果
 				layer.msg("登陆成功，即将跳转");
 				$("#loginForm").submit();
-				setTimeout(function(){
-					location.href="main.html";
-				}, 2000);
 			});
+
 		});
 	</script>
 </body>
