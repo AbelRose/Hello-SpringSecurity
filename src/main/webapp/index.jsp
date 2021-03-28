@@ -12,9 +12,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<link rel="stylesheet" href="${PATH }/layui/css/layui.css">
-<link rel="stylesheet" href="${PATH }/layui/css/admin.css">
-<link rel="stylesheet" href="${PATH }/layui/css/all.css">
+<link rel="stylesheet" href="${PATH}/layui/css/layui.css">
+<link rel="stylesheet" href="${PATH}/layui/css/admin.css">
+<link rel="stylesheet" href="${PATH}/layui/css/all.css">
 </head>
 <body>
 <form id="loginForm" action="${PATH}/index.jsp" method="post">
@@ -92,8 +92,8 @@
 
 	</div>
 </form>
-	<script src="${PATH }/layui/layui.js"></script>
-	<script src="${PATH }/layui/jquery-2.1.1.min.js"></script>
+	<script src="${PATH}/layui/layui.js"></script>
+	<script src="${PATH}/layui/jquery-2.1.1.min.js"></script>
 	<script>
 		layui.use([ 'element', 'form' ], function() {
 			var element = layui.element, form = layui.form, layer = layui.layer ;
