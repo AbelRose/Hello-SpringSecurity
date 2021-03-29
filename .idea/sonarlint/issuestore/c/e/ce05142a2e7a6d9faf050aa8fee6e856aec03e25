@@ -1,9 +1,9 @@
 
+U	java:S106c"9Replace this use of System.out or System.err by a logger.(Ýá¹¹8þî×ö†/
+X	java:S1255"<This block of commented-out lines of code should be removed.(ë±×¡8þî×ö†/
+X	java:S125"<This block of commented-out lines of code should be removed.(ó·í£8þî×ö†/
+X	java:S125*"<This block of commented-out lines of code should be removed.(Ö¹â‹8þî×ö†/
 ]	java:S125 "<This block of commented-out lines of code should be removed.(§ƒÕ¼ùÿÿÿÿ8þî×ö†/
 m
 java:S1192:"KDefine a constant instead of duplicating this literal "/index.jsp" 4 times.(¯‘§ÿýÿÿÿÿ8þî×ö†/
-X	java:S125*"<This block of commented-out lines of code should be removed.(Ö¹â‹8þî×ö†/
 ]	java:S125&"<This block of commented-out lines of code should be removed.(üà×Óùÿÿÿÿ8þî×ö†/
-X	java:S1255"<This block of commented-out lines of code should be removed.(ë±×¡8þî×ö†/
-U	java:S106h"9Replace this use of System.out or System.err by a logger.(Ýá¹¹8þî×ö†/
-X	java:S125"<This block of commented-out lines of code should be removed.(ó·í£8þî×ö†/

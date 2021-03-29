@@ -59,3 +59,6 @@ V
 &src/main/webapp/WEB-INF/views/main.jsp,f/0/f0ebffd056149bea284e829c2a69d5275a18074f
 Z
 *src/main/webapp/WEB-INF/include/navbar.jsp,4/9/4942c3ad0a6e2ab95461348f1315f780fc5e365b
+:
+
+.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
